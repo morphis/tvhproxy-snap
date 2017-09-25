@@ -2,7 +2,7 @@ name: tvhproxy
 version: 1
 summary: A small flask app to proxy requests between Plex Media Server and Tvheadend
 description: |
-  See https://github.com/jkaberg/tvhProxy for more details.
+  See https://github.com/morphis/tvhproxy-snap for more details.
 confinement: strict
 grade: stable
 
