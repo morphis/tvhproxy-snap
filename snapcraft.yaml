@@ -1,0 +1,31 @@
+name: tvhproxy
+version: 1
+summary: A small flask app to proxy requests between Plex Media Server and Tvheadend
+description: |
+  See https://github.com/jkaberg/tvhProxy for more details.
+confinement: strict
+grade: stable
+
+apps:
+  tvhproxy:
+    command: bin/tvhproxy.sh
+    daemon: simple
+    plugs: [network, network-bind]
+
+parts:
+  common:
+    plugin: dump
+    source: .
+    prime:
+      - bin/tvhproxy.sh
+  tvhproxy:
+    plugin: python
+    source: https://github.com/jkaberg/tvhProxy.git
+    source-type: git
+    python-packages:
+      - flask
+      - requests
+      - gevent
+    install: |
+      cp tvhProxy.py $SNAPCRAFT_PART_INSTALL
+      cp -r templates $SNAPCRAFT_PART_INSTALL
