@@ -1,3 +1,5 @@
+[![Snap Status](https://build.snapcraft.io/badge/morphis/tvhproxy-snap.svg)](https://build.snapcraft.io/user/morphis/tvhproxy-snap)
+
 # Snap package of tvhProxy
 
 This repository contains snap packaging of the tvhProxy python script which
