@@ -25,4 +25,5 @@ parts:
     source-type: git
     requirements: requirements.txt
     install: |
-      cp  -R ./ $SNAPCRAFT_PART_INSTALL/opt/tvhproxy
+      cp tvhProxy.py $SNAPCRAFT_PART_INSTALL
+      cp -r templates $SNAPCRAFT_PART_INSTALL

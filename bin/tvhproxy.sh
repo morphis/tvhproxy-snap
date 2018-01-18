@@ -7,4 +7,4 @@ fi
 
 export TVH_URL
 
-exec python3 $SNAP/opt/tvhproxy/tvhProxy.py
+exec python3 $SNAP/tvhProxy.py
